@@ -1,5 +1,7 @@
 class Person
-  include ActiveModel::Model
+  include ActiveModel::Attributes
 
-  attr_accessor :name, :age
+  attribute :name, :string
+  attribute :date_of_birth, :date
+  attribute :active, :boolean, default: true
 end

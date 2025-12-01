@@ -1,0 +1,16 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Articales" %>
+
+<h1>Articales</h1>
+
+<div id="articales">
+  <% @articales.each do |articale| %>
+    <%= render articale %>
+    <p>
+      <%= link_to "Show this articale", articale %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New articale", new_articale_path %>

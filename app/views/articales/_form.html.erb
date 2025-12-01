@@ -1,0 +1,17 @@
+<%= form_with(model: articale) do |form| %>
+  <% if articale.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(articale.errors.count, "error") %> prohibited this articale from being saved:</h2>
+
+      <ul>
+        <% articale.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

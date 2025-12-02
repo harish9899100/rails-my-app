@@ -8,6 +8,7 @@ class ArticalesController < ApplicationController
 
   # GET /articales/1 or /articales/1.json
   def show
+    @article = Articale.find(params[:id])
   end
 
   # GET /articales/new

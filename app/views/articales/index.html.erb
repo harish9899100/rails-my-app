@@ -5,11 +5,11 @@
 <h1>Articales</h1>
 
 <div id="articales">
-  <% @articales.each do |articale| %>
-    <%= render articale %>
-    <p>
-      <%= link_to "Show this articale", articale %>
-    </p>
+  <h1>List of article</h1>
+
+  <% @articales.each do |article| %>
+    <h1><%= link_to article.title, article %></h1>
+    <p><%= article.content %></p>
   <% end %>
 </div>
 

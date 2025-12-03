@@ -1,2 +1,3 @@
-<div id="<%= dom_id product %>">
-</div>
+<% <%= tag.div id: dom_id(my_product) do %>
+<h1><%= my_product.name %></h1>
+<%end%>

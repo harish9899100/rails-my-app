@@ -45,3 +45,32 @@
 <br>
 
 <%= link_to "New book", new_book_path %>
+
+
+
+
+<div class="card rounded-0 mt-5 mb-5">
+  <div class= "card-body">
+    <h2 class="text-center">Listing Books</h2>
+  </div>
+</div>
+<table class="table table-bordered">
+  <thead>
+  <tr>
+  <th>Book-Title</th>
+  <th>Book-Id</th>
+  <th>Book-Created_At</th>
+  <th>Book-Updated_At</th>
+  </tr>
+  </thead>
+  <tbody>
+    <% @books.each do |books|%>
+  <tr>
+    <td><%= books.title%></td>
+    <td><%= books.id%></td>
+    <td><%= books.created_at%></td>
+    <td><%= books.updated_at%></td>
+  </tr>
+  <%end%>
+  </tbody>
+</table>

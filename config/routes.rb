@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   resources :articales
   resources :books
   resources :pages
-  get "about" => "about_us"
+  get "about" => "pages#about_us"
   get "privacy" => "pages#privacy_policy"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_12_02_104312) do
+ActiveRecord::Schema[8.0].define(version: 2025_12_09_072155) do
   create_table "articales", force: :cascade do |t|
     t.string "title"
     t.text "content"
@@ -48,6 +48,12 @@ ActiveRecord::Schema[8.0].define(version: 2025_12_02_104312) do
     t.datetime "updated_at", null: false
     t.index ["book_id"], name: "index_books_orders_on_book_id"
     t.index ["order_id"], name: "index_books_orders_on_order_id"
+  end
+
+  create_table "comments", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "customers", force: :cascade do |t|

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_12_09_072155) do
+ActiveRecord::Schema[8.0].define(version: 2025_12_10_054509) do
   create_table "articales", force: :cascade do |t|
     t.string "title"
     t.text "content"
@@ -117,6 +117,14 @@ ActiveRecord::Schema[8.0].define(version: 2025_12_09_072155) do
 
   create_table "suppliers", force: :cascade do |t|
     t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "name"
+    t.string "email"
+    t.string "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

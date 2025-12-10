@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get "sessions/create"
   resources :comments
 
   resources :products
@@ -9,6 +10,7 @@ Rails.application.routes.draw do
   get "about" => "pages#about_us"
   get "privacy" => "pages#privacy_policy"
   get "terms" => "pages#terms_and_conditation"
+  resources :sessions, only: [ :new, :create ]
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

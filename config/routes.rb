@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  get "logins/new"
-  get "logins/create"
   get "sessions/create"
   resources :comments
 
@@ -13,7 +11,10 @@ Rails.application.routes.draw do
   get "privacy" => "pages#privacy_policy"
   get "terms" => "pages#terms_and_conditation"
   resources :sessions, only: [ :new, :create ]
-  resource :logins, only: [ :new, :create, :destroy ]
+   resource :logins, only: [ :new, :create, :destroy ]
+  # namespace :admin do
+  #   resources :logins
+  # end
 
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html

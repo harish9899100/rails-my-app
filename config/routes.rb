@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get "users/index"
+  get "users/new"
+  get "/users/:id", to: "users#show"
+  get "users/create"
   resources :practices
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

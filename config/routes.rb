@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  namespace :admin do
+  scope module: "admin" do
     resources :users
   end
   resource :geocoders

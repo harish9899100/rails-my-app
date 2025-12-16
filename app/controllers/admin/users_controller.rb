@@ -1,3 +1,4 @@
+module Admin
 class UsersController < ApplicationController
   def index
     @users = User.all
@@ -12,4 +13,5 @@ class UsersController < ApplicationController
 
   def create
   end
+end
 end

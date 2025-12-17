@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
   resources :magazines do
-    resources :ads
+    member do
+      get "preview"
+    end
   end
+  # resources :magazines do
+  #   resources :ads
+  # end
   # concern :commentable do
   #   resources :ads
   # end

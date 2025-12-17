@@ -1,8 +1,13 @@
 class MagazinesController < ApplicationController
   def index
-    @magazine = Magazine.all
+    @magazines = Magazine.all
   end
+
   def show
-    @magazine = Magazine.find(params[:magazine_id])
+    @magazine = Magazine.find(params[:id])
+  end
+
+  def preview
+    @magazine = Magazine.find(params[:id])
   end
 end

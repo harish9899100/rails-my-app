@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
-  match "magazines", to: "magazines#show", via: [ :get, :post ]
+  # get "*magazines", to: "magazines#show"
+  # get "magazines/*other", to: "magazines#unknown"
+  # get "magazines/*section/:name", to: "magazines#show"
+
+
+
+
+  # match "magazines", to: "magazines#show", via: [ :get, :post ]
   # get "magazines/:id", to: "magazines#show"
   # get "magazines(/:id)", to: "magazines#show"
   # resources :magazines do

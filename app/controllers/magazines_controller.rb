@@ -4,11 +4,14 @@ class MagazinesController < ApplicationController
   end
 
   def show
-    @magazine = Magazine.all
-    # @magazine = Magazine.find(params[:id])
+     # @magazine = Magazine.all
+     @magazine = Magazine.find(params[:id])
   end
 
   def preview
     @magazine = Magazine.all
+  end
+  def unknown
+      render plain: "Unknown magazine", status: :not_found
   end
 end

@@ -1,11 +1,11 @@
-<h1>Magazine Preview</h1>
+<h1>Magazines Preview (Collection)</h1>
 
-<p>
-  <strong>ID:</strong>
-  <%= @magazine.id %>
-</p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @magazine.name %>
-</p>
+<% if @magazines.present? %>
+  <% @magazines.each do |magazine| %>
+    <p>
+      <strong><%= magazine.name %></strong>
+    </p>
+  <% end %>
+<% else %>
+  <p>No magazines available.</p>
+<% end %>

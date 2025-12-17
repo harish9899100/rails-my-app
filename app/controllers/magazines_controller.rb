@@ -8,6 +8,6 @@ class MagazinesController < ApplicationController
   end
 
   def preview
-    @magazine = Magazine.find(params[:id])
+    @magazine = Magazine.all
   end
 end

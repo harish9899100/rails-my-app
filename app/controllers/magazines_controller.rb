@@ -3,5 +3,6 @@ class MagazinesController < ApplicationController
     @magazine = Magazine.all
   end
   def show
+    @magazine = Magazine.find(params[:magazine_id])
   end
 end

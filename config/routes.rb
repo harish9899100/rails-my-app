@@ -1,10 +1,13 @@
 Rails.application.routes.draw do
-  concern :commentable do
+  resources :magazines do
     resources :ads
   end
-  resources :movies, concerns: :commentable
-  resources :magazines, concerns: :commentable
-  # resources :movies do
+  # concern :commentable do
+  #   resources :ads
+  # end
+  # resources :movies, concerns: :commentable
+  # resources :magazines, concerns: :commentable
+  # # resources :movies do
   #   resources :ads
   # end
   # resources :magazines do

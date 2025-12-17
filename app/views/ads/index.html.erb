@@ -1,2 +1,7 @@
-<h1>Ads#index</h1>
-<p>Find me in app/views/ads/index.html.erb</p>
+<h1>Ads List</h1>
+
+<% @ads.each do |ad| %>
+  <p>
+    <%= link_to "Ad details", magazine_ad_path(@magazine, ad) %>
+  </p>
+<% end %>

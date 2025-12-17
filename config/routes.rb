@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  get "magazines/:id", to: "magazines#show"
+  match "magazines", to: "magazines#show", via: [ :get, :post ]
+  # get "magazines/:id", to: "magazines#show"
   # get "magazines(/:id)", to: "magazines#show"
   # resources :magazines do
   #   get "preview", on: :collection

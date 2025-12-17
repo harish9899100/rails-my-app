@@ -4,7 +4,8 @@ class MagazinesController < ApplicationController
   end
 
   def show
-    @magazine = Magazine.find(params[:id])
+    @magazine = Magazine.all
+    # @magazine = Magazine.find(params[:id])
   end
 
   def preview

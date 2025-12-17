@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get "magazines/:id/:ads_id", to: "magazines#show"
+  get "magazines/:id/with_user/:user_id", to: "magazines#show"
   # get "magazines(/:id)", to: "magazines#show"
   # resources :magazines do
   #   get "preview", on: :collection

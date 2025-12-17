@@ -3,8 +3,8 @@ Rails.application.routes.draw do
   #   resources :users
   # end
   # # resources :users, path: "/admin/users"
-  resources :magazines do
-    resources :ads, shallow: true
+  resources :magazines, shallow: true do
+    resources :ads
   end
   # resources :users
 end

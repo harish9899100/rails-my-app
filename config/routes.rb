@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
-  resources :magazines do
-    get "preview", on: :collection
-  end
+  get "magazines(/:id)", to: "magazines#show"
+  # resources :magazines do
+  #   get "preview", on: :collection
+  # end
   # resources :magazines do
   #   collection do
   #     get "preview"

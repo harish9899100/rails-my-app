@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
-  get "こんにちは", to: "magazines#index"
+  direct :homepage do
+  "https://google.com"
+end
+
+  # >> homepage_url
+  # => "https://rubyonrails.org"
+
+  # get "ररर", to: "magazines#index"
   # root to: "magazines#index"
   # match "/application.js", to: MyRackApp, via: :all
   # resource :geocoder

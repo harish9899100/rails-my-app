@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
-  direct :homepage do
-  "https://google.com"
-end
+  resources :magazines
+  direct :main do
+    { controller: "magazines", action: "index", subdomain: "www" }
+  end
+  #   direct :homepage do
+  #   "https://google.com"
+  # end
 
   # >> homepage_url
   # => "https://rubyonrails.org"

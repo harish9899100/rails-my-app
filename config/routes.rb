@@ -1,8 +1,13 @@
 Rails.application.routes.draw do
   resources :magazines
-  direct :main do
-    { controller: "magazines", action: "index", subdomain: "www" }
-  end
+  resolve("Magazines") { [ :magazines ] }
+
+
+
+  # resources :magazines
+  # direct :main do
+  #   { controller: "magazines", action: "index", subdomain: "www" }
+  # end
   #   direct :homepage do
   #   "https://google.com"
   # end

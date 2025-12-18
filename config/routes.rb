@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  resource :geocoder
-  get "magazines", to: redirect("/geocoder")
+match "/application.js", to: MyRackApp, via: :all
+  # resource :geocoder
+  # get "magazines", to: redirect("/geocoder")
   # get "*magazines", to: "magazines#show", format: true
   # get "magazines/*other", to: "magazines#unknown"
   # get "magazines/*section/:name", to: "magazines#show"

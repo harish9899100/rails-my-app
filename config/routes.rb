@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-    get "*magazines", to: "magazines#show", format: true
+  resource :geocoder
+  get "magazines", to: redirect("/geocoder")
+  # get "*magazines", to: "magazines#show", format: true
   # get "magazines/*other", to: "magazines#unknown"
   # get "magazines/*section/:name", to: "magazines#show"
 

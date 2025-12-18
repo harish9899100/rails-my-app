@@ -14,6 +14,8 @@ class MagazinesController < ApplicationController
   def preview
     @magazine = Magazine.all
   end
+  def new
+  end
   def unknown
       render plain: "Unknown magazine", status: :not_found
   end

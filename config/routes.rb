@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
-  resources :magazines, as: "abc"
+  scope path_names: { new: "another" } do
+    resources :magazines
+  end
+  # resources :magazines
+  # resources :magazines, path_names: { show: "look", index: "change" }
+  # resources :magazines, as: "abc"
   # resources :magazines, constraints: { id: /[A-Z][A-Z][0-9]+/ }
   # resources :aaa, controller: "magazines"
   # resources :magazines

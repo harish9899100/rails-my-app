@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
-     # scope path_names: { new: "another" } do
-     #   resources :magazines
-     # end
-     resources :magazines, except: :index
+  scope(path_names: { index: "aaa", new: "bbb" }) do
+    resources :magazines, path: "hk"
+  end
+  # scope path_names: { new: "another" } do
+  #   resources :magazines
+  # end
+  # resources :magazines, except: :index
   # resources :magazines, only: [ :index, :new ]
   # resources :magazines, path_names: { show: "look", index: "change" }
   # resources :magazines, as: "abc"

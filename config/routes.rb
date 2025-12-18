@@ -1,9 +1,7 @@
 Rails.application.routes.draw do
-  resources :magazines
-  resolve("Magazines") { [ :magazines ] }
-
-
-
+  resources :aaa, controller: "magazines"
+  # resources :magazines
+  # resolve("Magazines") { [ :magazines ] }
   # resources :magazines
   # direct :main do
   #   { controller: "magazines", action: "index", subdomain: "www" }

@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  # get "*magazines", to: "magazines#show"
+    get "*magazines", to: "magazines#show", format: true
   # get "magazines/*other", to: "magazines#unknown"
   # get "magazines/*section/:name", to: "magazines#show"
 

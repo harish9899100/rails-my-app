@@ -4,8 +4,11 @@ class MagazinesController < ApplicationController
   end
 
   def show
-     # @magazine = Magazine.all
-     @magazine = Magazine.find(params[:id])
+    # @magazine = Magazine.all
+    # @magazine = Magazine.find(params[:id])
+    render params[:magazines]
+  rescue ActionView::MissingTemplate
+    render file: "public/404.html", status: :not_found
   end
 
   def preview

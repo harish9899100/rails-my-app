@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  root to: "magazines#index"
+  get "こんにちは", to: "magazines#index"
+  # root to: "magazines#index"
   # match "/application.js", to: MyRackApp, via: :all
   # resource :geocoder
   # get "magazines", to: redirect("/geocoder")

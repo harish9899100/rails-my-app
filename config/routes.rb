@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-  scope path_names: { new: "another" } do
-    resources :magazines
-  end
-  # resources :magazines
+    # scope path_names: { new: "another" } do
+    #   resources :magazines
+    # end
+    resources :magazines, only: [ :index, :new ]
   # resources :magazines, path_names: { show: "look", index: "change" }
   # resources :magazines, as: "abc"
   # resources :magazines, constraints: { id: /[A-Z][A-Z][0-9]+/ }

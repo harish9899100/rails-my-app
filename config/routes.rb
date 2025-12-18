@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  resources :aaa, controller: "magazines"
+  resources :magazines, constraints: { id: /[A-Z][A-Z][0-9]+/ }
+  # resources :aaa, controller: "magazines"
   # resources :magazines
   # resolve("Magazines") { [ :magazines ] }
   # resources :magazines

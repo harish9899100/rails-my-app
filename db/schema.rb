@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_12_19_074123) do
+ActiveRecord::Schema[8.0].define(version: 2025_12_19_090314) do
   create_table "ads", force: :cascade do |t|
     t.string "name"
     t.integer "magazine_id", null: false
@@ -104,6 +104,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_12_19_074123) do
     t.string "name"
     t.integer "phone_number"
     t.string "address"
+    t.datetime "invitation_sent_at"
   end
 
   create_table "person_tests", force: :cascade do |t|

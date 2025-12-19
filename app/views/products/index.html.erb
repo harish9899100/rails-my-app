@@ -1,0 +1,24 @@
+<p style="color: green"><%= notice %></p>
+<%= render "header"%>
+
+<% content_for :title, "Products" %>
+
+ <h1>List of my products</h1>
+
+<div id="products">
+ 
+  <% @products.each do |product| %>
+    <h1>Name : <%= link_to product.name, product %>
+    <h2>Price : <%=  product.price%>
+    <h2>Uses : <%= product.uses%>
+    <p>
+      <%= link_to "Show this product", product %>
+    </p>
+  <% end %>
+</div>
+<br>
+<%= link_to "New product", new_product_path %>
+<br>
+<br>
+<%= render "mypractice"%>
+<%= render "footer"%>

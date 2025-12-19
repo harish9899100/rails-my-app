@@ -1,0 +1,12 @@
+<% content_for :title, "Editing articale" %>
+
+<h1>Editing articale</h1>
+
+<%= render "form", articale: @articale %>
+
+<br>
+
+<div>
+  <%= link_to "Show this articale", @articale %> |
+  <%= link_to "Back to articales", articales_path %>
+</div>

@@ -1,0 +1,17 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Articales" %>
+
+<h1>Articales</h1>
+
+<div id="articales">
+  <h1>List of article</h1>
+
+  <% @articales.each do |article| %>
+    <h1><%= link_to article.title, article %></h1>
+    <p><%= article.content %></p>
+  <% end %>
+</div>
+
+<%= link_to "New articale", new_articale_path %>
+<%= render "products/mypractice"%>

@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
-  scope(path_names: { index: "aaa", new: "bbb" }) do
-    resources :magazines, path: "hk"
-  end
+resources :magazines
+  # resources :magazines
+  # scope(path_names: { index: "aaa", new: "bbb" }) do
+  #   resources :magazines, path: "hk"
+  # end
   # scope path_names: { new: "another" } do
   #   resources :magazines
   # end

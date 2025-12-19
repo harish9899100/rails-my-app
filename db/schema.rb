@@ -10,7 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_11_27_094441) do
+ActiveRecord::Schema[8.0].define(version: 2025_12_19_074123) do
+  create_table "ads", force: :cascade do |t|
+    t.string "name"
+    t.integer "magazine_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["magazine_id"], name: "index_ads_on_magazine_id"
+  end
+
+  create_table "articales", force: :cascade do |t|
+    t.string "title"
+    t.text "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "authors", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
@@ -43,6 +58,12 @@ ActiveRecord::Schema[8.0].define(version: 2025_11_27_094441) do
     t.index ["order_id"], name: "index_books_orders_on_order_id"
   end
 
+  create_table "comments", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "customers", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
@@ -54,6 +75,12 @@ ActiveRecord::Schema[8.0].define(version: 2025_11_27_094441) do
   end
 
   create_table "email_contacts", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "magazines", force: :cascade do |t|
+    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -74,9 +101,26 @@ ActiveRecord::Schema[8.0].define(version: 2025_11_27_094441) do
   create_table "people", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "name"
+    t.integer "phone_number"
+    t.string "address"
   end
 
   create_table "person_tests", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "practices", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "name"
+  end
+
+  create_table "products", force: :cascade do |t|
+    t.string "name"
+    t.integer "price"
+    t.text "uses"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -99,4 +143,14 @@ ActiveRecord::Schema[8.0].define(version: 2025_11_27_094441) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  create_table "users", force: :cascade do |t|
+    t.string "name"
+    t.string "email"
+    t.string "password_digest"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_foreign_key "ads", "magazines"
 end

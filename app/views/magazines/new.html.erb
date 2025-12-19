@@ -1,0 +1,75 @@
+<div class="page-wrapper">
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Welcome to MyApp</h1>
+    <p class="subtitle">
+      A simple, clean Rails view designed for clarity and usability.
+    </p>
+
+    <div class="hero-actions">
+      <%= link_to "Get Started", "#", class: "btn btn-primary" %>
+      <%= link_to "Learn More", "#", class: "btn btn-secondary" %>
+    </div>
+  </section>
+
+  <!-- Content Section -->
+  <section class="content">
+    <h2>Why This Design?</h2>
+
+    <div class="cards">
+      <div class="card">
+        <h3>Clean Structure</h3>
+        <p>
+          Uses semantic HTML sections so the layout is easy to understand
+          and maintain.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Rails Friendly</h3>
+        <p>
+          Works perfectly with Rails helpers like <code>link_to</code>
+          and partials.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Easy to Extend</h3>
+        <p>
+          You can plug in Bootstrap, Tailwind, or your own CSS later
+          without rewriting the view.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>
+      © <%= Time.current.year %> MyApp. All rights reserved.
+    </p>
+  </footer>
+</div>
+
+<style>
+  /* Layout */
+  .page-wrapper {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    color: #1f2933;
+    background: #f9fafb;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Hero */
+  .hero {
+    background: linear-gradient(135deg, #2563eb, #1e40af);
+    color: #ffffff;
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+    margin-

@@ -1,14 +1,89 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+resources :magazines
+  # resources :magazines
+  # scope(path_names: { index: "aaa", new: "bbb" }) do
+  #   resources :magazines, path: "hk"
+  # end
+  # scope path_names: { new: "another" } do
+  #   resources :magazines
+  # end
+  # resources :magazines, except: :index
+  # resources :magazines, only: [ :index, :new ]
+  # resources :magazines, path_names: { show: "look", index: "change" }
+  # resources :magazines, as: "abc"
+  # resources :magazines, constraints: { id: /[A-Z][A-Z][0-9]+/ }
+  # resources :aaa, controller: "magazines"
+  # resources :magazines
+  # resolve("Magazines") { [ :magazines ] }
+  # resources :magazines
+  # direct :main do
+  #   { controller: "magazines", action: "index", subdomain: "www" }
+  # end
+  #   direct :homepage do
+  #   "https://google.com"
+  # end
 
-  # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
-  # Can be used by load balancers and uptime monitors to verify that the app is live.
-  get "up" => "rails/health#show", as: :rails_health_check
+  # >> homepage_url
+  # => "https://rubyonrails.org"
 
-  # Render dynamic PWA files from app/views/pwa/* (remember to link manifest in application.html.erb)
-  # get "manifest" => "rails/pwa#manifest", as: :pwa_manifest
-  # get "service-worker" => "rails/pwa#service_worker", as: :pwa_service_worker
+  # get "ररर", to: "magazines#index"
+  # root to: "magazines#index"
+  # match "/application.js", to: MyRackApp, via: :all
+  # resource :geocoder
+  # get "magazines", to: redirect("/geocoder")
+  # get "*magazines", to: "magazines#show", format: true
+  # get "magazines/*other", to: "magazines#unknown"
+  # get "magazines/*section/:name", to: "magazines#show"
 
-  # Defines the root path route ("/")
-  # root "posts#index"
+
+
+
+  # match "magazines", to: "magazines#show", via: [ :get, :post ]
+  # get "magazines/:id", to: "magazines#show"
+  # get "magazines(/:id)", to: "magazines#show"
+  # resources :magazines do
+  #   get "preview", on: :collection
+  # end
+  # resources :magazines do
+  #   collection do
+  #     get "preview"
+  #   end
+  # end
+  # resources :magazines do
+  #   collection do
+  #     get "preview"
+  #   end
+  # end
+  # resources :magazines do
+  #   get "preview", on: :member
+  # end
+  # resources :magazines do
+  #   member do
+  #     get "preview"
+  #   end
+  # end
+  # resources :magazines do
+  #   resources :ads
+  # end
+  # concern :commentable do
+  #   resources :ads
+  # end
+  # resources :movies, concerns: :commentable
+  # resources :magazines, concerns: :commentable
+  # # resources :movies do
+  #   resources :ads
+  # end
+  # resources :magazines do
+  #   resources :ads
+  # end
+  # scope module: "admin" do
+  #   resources :users
+  # end
+  # # resources :users, path: "/admin/users"
+  # shallow do
+  #   resources :magazines do
+  #     resources :ads
+  #   end
+  # end
+  # resources :users
 end

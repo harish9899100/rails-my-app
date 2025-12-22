@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get "items/index"
+  get "items/show"
+  get "items/new"
   resources :people, only: [ :index, :show ]
   get "people/index"
   get "people/show"

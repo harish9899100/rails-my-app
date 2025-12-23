@@ -1,0 +1,14 @@
+@import "tailwindcss";
+body {
+        background-color: #b6d3f1;
+      }
+      h1 {font-size: 40px; color:darkblue;}
+      h2 {font-size: 35px; color: blueviolet;}
+      p {
+        font-size: 20px;
+      }
+      table, th, td {border: solid green; text-align: center;}
+      table {width: 500; height: 300; align-self: center;}
+      th {color: red;}
+      td {color: blue;}
+      caption {color: blueviolet;font-size: 30px;}

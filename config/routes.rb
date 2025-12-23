@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  resources :items
+  # get "items/welcome"
+  # get "items/index"
+  # get "items/:id", to: "items#show", as: :item
+  # get "items/new"
+  resources :people, only: [ :index, :show ]
+  get "people/index"
+  get "people/show"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.

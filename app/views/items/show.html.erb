@@ -1,2 +1,19 @@
-<h1>Items#show</h1>
-<p>Find me in app/views/items/show.html.erb</p>
+<table>
+  <caption>Item</caption>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Uses</th>
+      <th>Price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><%= @item.name %></td>
+      <td><%= @item.uses %></td>
+      <td><%= @item.price %></td>
+    </tr>
+  </tbody>
+</table>
+<%= link_to "Edit", edit_item_path(@item) %> |
+<%= link_to "Back", items_path %>

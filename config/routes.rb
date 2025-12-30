@@ -1,9 +1,8 @@
 Rails.application.routes.draw do
+  resources :cars
+
   resources :items
-  # get "items/welcome"
-  # get "items/index"
-  # get "items/:id", to: "items#show", as: :item
-  # get "items/new"
+
   resources :people, only: [ :index, :show ]
   get "people/index"
   get "people/show"

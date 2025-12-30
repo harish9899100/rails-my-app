@@ -1,0 +1,18 @@
+<table>
+  <caption>Car</caption>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Speed</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><%= @car.name %></td>
+      <td><%= @car.price %></td>
+      <td><%= @car.speed %></td>
+    </tr>
+  </tbody>
+</table>
+<%= link_to "Back", cars_path  %>
